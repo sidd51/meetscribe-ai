@@ -51,11 +51,11 @@ export const summarizeMeeting =async(transcript)=>{
   const raw = completion.choices[0].message.content
   
   try{
-    return JSON.parse(raw)
+    return JSON.parse(raw) //JSON parsing is the process of converting a JSON-formatted text string into a native, structured data object (like a JavaScript object,
 
   }catch(e){
       // If Llama added any extra text, strip it and try again
-      const match=raw.match(/\{[\s\S]*\}/)
+      const match=raw.match(/\{[\s\S]*\}/) //regex parser
       if(match) return JSON.parse(match[0])
       throw new Error('Could not parse AI response as JSON')
   }
