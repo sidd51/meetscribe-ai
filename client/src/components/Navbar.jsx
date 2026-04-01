@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 function Navbar() {
   const location = useLocation()
-
+  // useLocation() is a React Router hook that tells you the current URL path — we use it to highlight the active nav link.
   const linkClass = (path) =>
     `px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
       location.pathname === path

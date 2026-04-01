@@ -7,18 +7,18 @@ const API =axios.create({
 })
 
 export const uploadMeeting = ( formData , onUploadProgress) =>{
-  API.post('/meetings/upload', formData,{
+  return API.post('/meetings/upload', formData,{
     headers: { 'Content-type' : 'multipart/form-data'},
     onUploadProgress
   })
 }
 
 export const getMeetings =()=>{
-  API.get('/meetings')
+  return API.get('/meetings')
 }
 
 export const getMeetingById =(id)=>{
-  API.get(`/meetings/${id}`)
+  return API.get(`/meetings/${id}`)
 }
 
 
