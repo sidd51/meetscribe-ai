@@ -8,7 +8,12 @@ import meetingRoutes from "./routes/meetingRoutes.js"
 
  const app =express();
 
- app.use(cors());
+ app.use(cors({
+  origin: [
+    'http://localhost:5173',          // local dev
+    'https://meetscribe-ai-ten.vercel.app' // your actual Vercel URL
+  ]
+ }));
  app.use(express.json())
 
 
