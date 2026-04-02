@@ -40,7 +40,7 @@ function UploadPage() {
       })
 
       navigate(`/results/${response.data.meeting._id}`, {
-        state: { meeting: response.data.meeting }
+        state: { meeting: response.data.meeting } //sending meeting data in router state
       })
 
     } catch (err) {
