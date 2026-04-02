@@ -4,9 +4,9 @@ import {
   ArrowLeft, Calendar, Clock, Download,
   ChevronDown, ChevronUp, Copy, Check
 } from 'lucide-react'
-import SummaryCard from '../components/SummaryCard'
-import LoadingSpinner from '../components/LoadingSpinner'
-import { getMeetingById } from '../services/api'
+import SummaryCard from '../components/SummaryCard.jsx'
+import LoadingSpinner from '../components/LoadingSpinner.jsx'
+import { getMeetingById } from '../services/api.js'
 
 function ResultsPage() {
   const { id } = useParams()
